@@ -2,22 +2,15 @@ import streamlit as st
 import pandas as pd
 import joblib
 import os
-# # Load artifacts
-# scaler = joblib.load('models/scaler.joblib')
-# model  = joblib.load('models/tuned_dt.joblib')
 
-# st.title("🛡️ Health Insurance Premium Estimator")
-
-# import os, joblib, streamlit as st, pandas as pd
-
-# 1. Find this file’s directory
+# Find this file’s directory
 BASE_DIR = os.path.dirname(__file__)
 
-# 2. Build absolute paths
+# Build absolute paths
 SCALER_PATH = os.path.join(BASE_DIR, "models", "scaler.joblib")
 MODEL_PATH  = os.path.join(BASE_DIR, "models", "tuned_dt.joblib")
 
-# 3. Load
+# Load
 scaler = joblib.load(SCALER_PATH)
 model  = joblib.load(MODEL_PATH)
 
